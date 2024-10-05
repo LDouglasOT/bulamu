@@ -6,7 +6,7 @@
   <title>Witch Craft Services - Bulamu African Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -14,63 +14,95 @@
     .nav-link.active {
       color: #34D399; /* slate highlight */
     }
-    .float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
-
-.my-float{
-	margin-top:16px;
-}
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .my-float {
+      margin-top: 16px;
+    }
   </style>
 </head>
 <body class="bg-slate-900 text-gray-800">
   <a href="https://wa.me/256767694083?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
-    </a>
-  <!-- Navbar -->
-  <nav class="bg-slate-800 fixed top-0 w-full z-10">
-    <div class="container mx-auto flex items-center justify-between py-4">
-      <a href="#home" class="text-white text-2xl font-bold">Bulamu African Solutions</a>
-      <ul class="flex space-x-4">
-        <li><a href="#home" class="text-white hover:text-slate-300 nav-link">Home</a></li>
-        <li><a href="#about" class="text-white hover:text-slate-300 nav-link">About</a></li>
-        <li><a href="#services" class="text-white hover:text-slate-300 nav-link">Services</a></li>
-        <li><a href="#contact" class="text-white hover:text-slate-300 nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  </a>
 
-  <!-- Header Section -->
-  <header id="home" class="bg-slate-800 text-white bg-cover bg-center" style="background-image: url('./Enono/914b94224b39dfd517558792a6aff5d0.jpg'); height: 600px; margin-top: 64px;">
-    <div class="container mx-auto text-center flex items-center justify-center h-full">
+  <!-- Navbar -->
+  <nav class="bg-slate-800 fixed top-0 w-full z-10 px-5">
+    <div class="container mx-auto flex items-center justify-between py-4">
+        <a href="#home" class="text-white text-2xl font-bold">Bulamu African Solutions</a>
+        
+        <div class="md:hidden">
+            <button id="menu-button" class="text-white focus:outline-none">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <ul class="hidden md:flex space-x-4" id="nav-links">
+            <li><a href="#home" class="text-white hover:text-slate-300 nav-link">Home</a></li>
+            <li><a href="#about" class="text-white hover:text-slate-300 nav-link">About</a></li>
+            <li><a href="#services" class="text-white hover:text-slate-300 nav-link">Services</a></li>
+            <li><a href="#contact" class="text-white hover:text-slate-300 nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="md:hidden">
+        <ul id="dropdown-menu" class="hidden text-white">
+            <li><a href="#home" class="block px-4 py-2 hover:bg-slate-600">Home</a></li>
+            <li><a href="#about" class="block px-4 py-2 hover:bg-slate-600">About</a></li>
+            <li><a href="#services" class="block px-4 py-2 hover:bg-slate-600">Services</a></li>
+            <li><a href="#contact" class="block px-4 py-2 hover:bg-slate-600">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const menuButton = document.getElementById('menu-button');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+  <header id="home" class="bg-slate-800 text-white bg-cover bg-center px-5" style="background-image: url('./Enono/914b94224b39dfd517558792a6aff5d0.jpg'); height: 600px; margin-top: 64px;">
+    <div class="container mx-auto text-center flex items-center justify-center h-full flex-col">
       <div>
         <h1 class="text-5xl font-bold text-slate-100">Bulamu African Solutions</h1>
         <p class="text-lg mt-2 text-slate-100">Traditional Healing for Modern Times</p>
 
-        <!-- WhatsApp Button with Icon -->
-        <div class="mt-4 rounded-lg">
-          <a href="https://wa.me/15551234567?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
-             class="bg-slate-500 text-white px-6 py-2 rounded-xl hover:bg-slate-600 inline-flex items-center transition duration-300">
+
+        <div class="mt-4 flex flex-col md:flex-row md:space-x-4 justify-center">
+  
+          <a href="https://wa.me/256767694083?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+             class="bg-slate-500 text-white px-6 py-2 rounded-xl hover:bg-slate-600 inline-flex items-center transition duration-300 mb-2 md:mb-0">
             <img src="./Enono/icons8-whatsapp-48.png" class="w-6 h-6 mr-2" alt="WhatsApp">
             WhatsApp chat
+          </a>
+ 
+          <a href="tel:+256767694083" class="bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600 inline-flex items-center transition duration-300">
+            <span class="text-lg">📞</span> Call Us
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- About Section -->
+
   <section id="about" class="py-16 my-10">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold text-white px-20 mx-auto mb-10">About Us</h2>
@@ -78,7 +110,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+
   <section id="services" class="py-16 bg-white">
     <div class="container mx-auto">
       <h2 class="text-4xl font-bold text-center text-slate-800 mb-6">Our Services</h2>
@@ -192,8 +224,7 @@
     </div>
   </section>
 
-
-  <section id="contact" class="py-16 bg-slate-800 text-white">
+  <section id="contact" class="py-16 bg-slate-800 px-5 text-white">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
       <p class="mb-4">For inquiries, please reach out through our <a href="https://wa.me/256767694083?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="text-slate-400 underline">WhatsApp</a> link or fill out the contact form below.</p>
@@ -215,14 +246,16 @@
       </form>
     </div>
   </section>
-  
-
 
   <footer class="bg-slate-800 text-white py-4">
     <div class="container mx-auto text-center">
       <p>&copy; 2024 Bulamu African Solutions. All rights reserved.</p>
     </div>
   </footer>
-  
+
+  <a href="tel:+256767694083" class="fixed bottom-4 left-4 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition duration-300">
+    📞
+  </a>
+
 </body>
 </html>
