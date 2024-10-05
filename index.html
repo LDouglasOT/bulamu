@@ -6,6 +6,7 @@
   <title>Witch Craft Services - Bulamu African Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -13,9 +14,30 @@
     .nav-link.active {
       color: #34D399; /* slate highlight */
     }
+    .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
   </style>
 </head>
 <body class="bg-slate-900 text-gray-800">
+  <a href="https://wa.me/256767694083?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
   <!-- Navbar -->
   <nav class="bg-slate-800 fixed top-0 w-full z-10">
     <div class="container mx-auto flex items-center justify-between py-4">
@@ -51,8 +73,8 @@
   <!-- About Section -->
   <section id="about" class="py-16 my-10">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-white  px-20 mx-auto mb-10">About Us</h2>
-      <p class="text-lg text-white max-w-3xl mx-auto">At Bulamu African Solutions, we offer authentic traditional healing practices guided by ancestral practices. Our services are designed to help with spiritual cleansing, protection, love portions, financial growth, and more.</p>
+      <h2 class="text-4xl font-bold text-white px-20 mx-auto mb-10">About Us</h2>
+      <p class="text-lg text-white max-w-3xl mx-auto">At Bulamu African Solutions, we offer authentic traditional healing practices guided by ancestral knowledge. Our services are designed to help with spiritual cleansing, protection, love portions, financial growth, and more.</p>
     </div>
   </section>
 
@@ -62,96 +84,145 @@
       <h2 class="text-4xl font-bold text-center text-slate-800 mb-6">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Reignite Lost Love or Foster New Romance</h3>
-          <p class="text-gray-600">Our powerful love charms are designed to heal broken relationships, rekindle the spark between lovers, and attract new love into your life. Whether you're looking to bring back a lost lover, strengthen an existing relationship, or inspire someone to fall in love with you, our traditional practices will guide you towards fulfilling love and harmony.</p>
+          <img src="./Enono/love.jpg" alt="Get That Lover" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Get That Lover</h3>
+          <p class="text-gray-600">For those looking for lovers, Bulamu has the perfect power to make anyone madly in love with you. Bring back your ex, rekindle love, and spice up your relationship with ancient techniques.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Protection Charms</h3>
-          <p class="text-gray-600">Get powerful protection charms crafted specifically for you to ward off evil spirits, bad luck, and negative influences.</p>
+          <img src="./Enono/revenge.jpg" alt="Get Back At Someone" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Get Back At Someone</h3>
+          <p class="text-gray-600">Bulamu has revenge powers to help you against those who have wronged you. Get in touch for protection and justice.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Business success</h3>
-          <p class="text-gray-600">Our powerful business success talismans are designed to help you draw in more customers, increase sales, and achieve financial prosperity. Whether you’re starting a new venture or seeking to enhance an existing business, our traditional rituals and talismans can remove obstacles and amplify your opportunities, guiding you towards lasting success and wealth.</p>
+          <img src="./Enono/ring.jpg" alt="Rings of Luck and Protection" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Rings of Luck and Protection</h3>
+          <p class="text-gray-600">Bulamu's rings will ensure you win in all you do and protect you from evil eyes and curses.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Retrieval Talismans for Stolen Items</h3>
-          <p class="text-gray-600">Our powerful retrieval talismans are specifically designed to assist individuals in recovering stolen possessions. Utilizing ancient techniques and ancestral wisdom, we help to compel those who have taken from you to return what is rightfully yours. Whether it’s valuables or personal items, our rituals aim to restore what has been lost, bringing peace of mind and closure to your situation.</p>
+          <img src="./Enono/preg.jpg" alt="Stop Pregnancies" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Stop Pregnancies</h3>
+          <p class="text-gray-600">Bulamu offers solutions for those wanting to avoid pregnancies with no harmful effects.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Business success</h3>
-          <p class="text-gray-600">Our powerful business success talismans are designed to help you draw in more customers, increase sales, and achieve financial prosperity. Whether you’re starting a new venture or seeking to enhance an existing business, our traditional rituals and talismans can remove obstacles and amplify your opportunities, guiding you towards lasting success and wealth.</p>
+          <img src="./Enono/protection.jpg" alt="Get Protection from Evil" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Get Protection from Evil</h3>
+          <p class="text-gray-600">Bulamu provides powerful protections from harmful witchcraft and evil spirits.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Business success</h3>
-          <p class="text-gray-600">Our powerful business success talismans are designed to help you draw in more customers, increase sales, and achieve financial prosperity. Whether you’re starting a new venture or seeking to enhance an existing business, our traditional rituals and talismans can remove obstacles and amplify your opportunities, guiding you towards lasting success and wealth.</p>
+          <img src="./Enono//lost.jpg" alt="Bring Back Lost Item or Person" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Bring Back Lost Item or Person</h3>
+          <p class="text-gray-600">Bulamu can help recover anything you’ve lost, whether a person or an item.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Business success</h3>
-          <p class="text-gray-600">Our powerful business success talismans are designed to help you draw in more customers, increase sales, and achieve financial prosperity. Whether you’re starting a new venture or seeking to enhance an existing business, our traditional rituals and talismans can remove obstacles and amplify your opportunities, guiding you towards lasting success and wealth.</p>
+          <img src="./Enono/job.jpg" alt="Job Promotions and Protection" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Job Search, Promotions and Protection</h3>
+          <p class="text-gray-600">Get that promotion or secure your job position with Bulamu's powers.</p>
         </div>
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <h3 class="text-xl font-bold text-slate-700 mb-4">Business success</h3>
-          <p class="text-gray-600">Our powerful business success talismans are designed to help you draw in more customers, increase sales, and achieve financial prosperity. Whether you’re starting a new venture or seeking to enhance an existing business, our traditional rituals and talismans can remove obstacles and amplify your opportunities, guiding you towards lasting success and wealth.</p>
+          <img src="./Enono/marriage.jpg" alt="Marriage and Divorce Problems" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Marriage and Divorce Problems</h3>
+          <p class="text-gray-600">Bulamu offers help for failing marriages or assistance with divorce.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/land.jpg" alt="Land Wrangles" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Land Wrangles</h3>
+          <p class="text-gray-600">Get back your stolen land or win court cases with Bulamu's powers.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/relationship.jpg" alt="Relationship Problems" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Relationship Problems</h3>
+          <p class="text-gray-600">Bulamu can help fix relationships and ensure loyalty from partners.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/court.jpg" alt="Win Court Cases" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Win Court Cases</h3>
+          <p class="text-gray-600">Bulamu's powers can help ensure victory in your legal matters.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/interview.jpg" alt="Pass Job Interviews" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Pass Job Interviews</h3>
+          <p class="text-gray-600">Enhance your confidence and skills with Bulamu's assistance in job interviews.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/visa.jpg" alt="Struggling for Visa and Citizenship" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Struggling for Visa and Citizenship</h3>
+          <p class="text-gray-600">Bulamu helps smooth out the path to obtaining visas and citizenship.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/download.jpeg" alt="Financial Prosperity Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Financial Prosperity Rituals</h3>
+          <p class="text-gray-600">Attract wealth with Bulamu's rituals tailored for financial success.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/love.jpg" alt="Relationship Harmony Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Relationship Harmony Rituals</h3>
+          <p class="text-gray-600">Protect your family and relationships with Bulamu's powerful rituals.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/b498f7844312c516c52df534655661dd.jpg" alt="Business Success Charms" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Business Success Charms</h3>
+          <p class="text-gray-600">Ensure your business thrives with Bulamu's success charms.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/love.jpg" alt="Love and Attraction Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Love and Attraction Rituals</h3>
+          <p class="text-gray-600">Bulamu's rituals will help you attract love or rekindle passion.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/25055882190e7616a4402400c5194126.jpg" alt="Breaking Curses Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Breaking Curses Rituals</h3>
+          <p class="text-gray-600">If you believe you are under a curse, Bulamu can help lift it.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/d6ff65696fa5f90fc3ba7dd4844621ef.jpg" alt="Success in Exams Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Success in Exams Rituals</h3>
+          <p class="text-gray-600">Bulamu provides rituals to help students excel in their studies.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/images (1).jpeg" alt="Protection Amulets and Talismans" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Protection Amulets and Talismans</h3>
+          <p class="text-gray-600">Get personalized amulets crafted by Bulamu for continuous protection.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <img src="./Enono/court.jpg" alt="Success in Legal Matters Rituals" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-bold text-slate-700 mb-4">Success in Legal Matters Rituals</h3>
+          <p class="text-gray-600">Ensure success in legal issues with Bulamu's powerful rituals.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="py-16 bg-gray-50">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center text-slate-800 mb-6">Contact Us</h2>
-      <div class="max-w-xl mx-auto">
-        <form class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-600">
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-600">
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-            <textarea id="message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-slate-600"></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="bg-slate-600 text-white px-6 py-2 rounded-md hover:bg-slate-700 transition duration-300">Send Message</button>
-          </div>
-        </form>
-      </div>
+
+  <section id="contact" class="py-16 bg-slate-800 text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
+      <p class="mb-4">For inquiries, please reach out through our <a href="https://wa.me/256767694083?text=Hello%20Bulamu%20African%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="text-slate-400 underline">WhatsApp</a> link or fill out the contact form below.</p>
+      
+      <form action="https://formspree.io/f/xovqadpz" method="POST" class="max-w-md mx-auto mt-6">
+        <div class="mb-4">
+          <label for="name" class="block text-sm mb-1">Name:</label>
+          <input type="text" id="name" name="name" required class="w-full p-2 rounded border border-gray-300" placeholder="Your Name">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm mb-1">Email:</label>
+          <input type="email" id="email" name="email" required class="w-full p-2 rounded border border-gray-300" placeholder="Your Email">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm mb-1">Message:</label>
+          <textarea id="message" name="message" required class="w-full p-2 rounded border border-gray-300" placeholder="Your Message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="bg-slate-500 text-white px-4 py-2 rounded-lg hover:bg-slate-600 transition duration-300">Send Message</button>
+      </form>
     </div>
   </section>
+  
 
-  <!-- Footer -->
+
   <footer class="bg-slate-800 text-white py-4">
     <div class="container mx-auto text-center">
-      <p>&copy; 2024 Bulamu African Solutions. All Rights Reserved.</p>
+      <p>&copy; 2024 Bulamu African Solutions. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    // Highlight active navbar link based on section
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+  
 </body>
 </html>
