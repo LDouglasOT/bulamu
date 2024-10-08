@@ -98,37 +98,48 @@
     menuButton.addEventListener('click', () => {
         dropdownMenu.classList.toggle('hidden');
     });
-    async function sendMessage() {
+    async function submitForm() {
     let headersList = {
-        "Accept": "*/*",
-        "Authorization": "Bearer 48def091a4c3a34df4cb6552228a50fe3a9ff1d881e9915ff81cec0db24a64cac61745f943056950d55662b9e0eaf70f",
+        "Accept": "application/json",
         "Content-Type": "application/json"
     };
 
     let bodyContent = JSON.stringify({
-        "number": "0712345678",
+        "name": "New User",
+        "email": "user@example.com",
         "message": "Sample Message"
     });
-    if (!localStorage.getItem('messageSent')) {
+
+
+    if (!localStorage.getItem('formSubmitted')) {
         try {
-            let response = await fetch("https://cors-anywhere.herokuapp.com/https://app.esmsuganda.com/api/v1/send-sms", { 
+            let response = await fetch("https://formspree.io/f/xovqadpz", { 
                 method: "POST",
                 body: bodyContent,
                 headers: headersList
             });
 
-            let data = await response.text();
+            let data = await response.json();
             console.log(data);
-            localStorage.setItem('messageSent', 'true');
+
+            
+            if (response.ok) {
+                localStorage.setItem('formSubmitted', 'true');
+                console.log('Form submitted successfully.');
+            } else {
+                console.error('Form submission failed:', data);
+            }
         } catch (error) {
-            console.error('Error sending message:', error);
+            console.error('Error submitting form:', error);
         }
     } else {
-        console.log('Message has already been sent.');
+        console.log('Form has already been submitted.');
     }
 }
 
-sendMessage();
+
+submitForm();
+
 
 
 </script>
