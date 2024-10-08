@@ -98,17 +98,17 @@
     menuButton.addEventListener('click', () => {
         dropdownMenu.classList.toggle('hidden');
     });
+    async function sendMessage() {
     let headersList = {
-      "Accept": "*/*",
-      "Authorization": "Bearer 48def091a4c3a34df4cb6552228a50fe3a9ff1d881e9915ff81cec0db24a64cac61745f943056950d55662b9e0eaf70f",
-      "Content-Type": "application/json"
-  };
+        "Accept": "*/*",
+        "Authorization": "Bearer <API Key>",
+        "Content-Type": "application/json"
+    };
 
     let bodyContent = JSON.stringify({
-        "number": "0740733532",
-        "message": "New user is here"
+        "number": "0712345678",
+        "message": "Sample Message"
     });
-
     if (!localStorage.getItem('messageSent')) {
         try {
             let response = await fetch("https://app.esmsuganda.com/api/v1/send-sms", { 
@@ -119,7 +119,6 @@
 
             let data = await response.text();
             console.log(data);
-
             localStorage.setItem('messageSent', 'true');
         } catch (error) {
             console.error('Error sending message:', error);
@@ -127,6 +126,10 @@
     } else {
         console.log('Message has already been sent.');
     }
+}
+
+sendMessage();
+
 
 </script>
 
