@@ -1,4 +1,451 @@
+/* Base Styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
 
-body{
-    padding: 0px 200px;
+/* Performance Optimization for Animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hardware Acceleration for Animated Elements */
+.service-card,
+.testimonial-card,
+.gallery-item,
+.stats-item,
+.float,
+nav,
+header {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Container adjustments for better responsiveness */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Smooth scrolling enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation enhancements */
+nav {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section overlay for better text readability */
+header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+header > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero slider animation */
+.hero-slider {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes heroFade {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Service cards hover effects */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  opacity: 1 !important;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(52, 211, 153, 0.3);
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card::after {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 80px;
+  color: rgba(52, 211, 153, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Stats counter animation */
+.stats-item {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery grid improvements */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item::after {
+  content: '🔍';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Product cards */
+.product-card {
+  border: 1px solid #e5e7eb;
+}
+
+/* Button enhancements */
+a[href^="tel:"],
+a[href^="https://wa.me/"] {
+  transition: all 0.3s ease;
+}
+
+a[href^="tel:"]:hover,
+a[href^="https://wa.me/"]:hover {
+  transform: scale(1.05);
+}
+
+/* Form styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #34D399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1);
+}
+
+/* Loading animation for images */
+img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+img[src] {
+  animation: none;
+  background: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+  outline: 2px solid #34D399;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .float,
+  nav,
+  footer,
+  a[href^="tel:"],
+  a[href^="https://wa.me/"] {
+    display: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Animation for scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* WhatsApp button pulse animation */
+.float {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Modal improvements */
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Improved text readability */
+p {
+  line-height: 1.6;
+}
+
+/* Section spacing */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover glow effect for buttons */
+a[class*="bg-green"]:hover,
+a[class*="bg-slate"]:hover {
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+}
+
+/* Service card icon animation */
+.service-card:hover .text-3xl {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Testimonial star rating animation */
+.testimonial-card:hover .flex.text-yellow-400 {
+  animation: sparkle 0.5s ease;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Enhanced gallery hover effect */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.3), rgba(16, 185, 129, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #34D399;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Hero section text animation */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  animation: slideInFromTop 0.8s ease-out;
+}
+
+header p {
+  animation: slideInFromTop 1s ease-out;
+}
+
+/* CTA button pulse effect */
+.cta-pulse {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(52, 211, 153, 0);
+  }
 }
